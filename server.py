@@ -7,6 +7,8 @@ from tornado.httpserver import HTTPServer
 import config
 import urls
 import redis
+import logging
+import logging.config
 
 
 define(name="port", type=int, help="Port Bind")
@@ -20,6 +22,9 @@ class BaseApplication(Application):
 
 
 def main():
+    # options.logging = config.log_level
+    # options.log_file_prefix = config.log_path
+    options.parse_command_line()
     app = BaseApplication(urls.urls, **config.conf)
     cur_server = HTTPServer(app)
     cur_server.listen(config.port)
