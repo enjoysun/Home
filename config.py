@@ -17,7 +17,7 @@ conf = {
 mysqlconn = dict(host="127.0.0.1", database="house", user="root", password="123")
 
 # redis
-redisconn = dict()
+redisconn = dict(host="127.0.0.1", port=6379)
 
 """
 关于日志记录：Python server.py --help查看记录日记配置参数
