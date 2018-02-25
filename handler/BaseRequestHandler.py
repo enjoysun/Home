@@ -1,8 +1,14 @@
 # coding:utf-8
-from tornado.web import RequestHandler
+from tornado.web import RequestHandler, StaticFileHandler
+from log import Logger
+import json
 
 
 class BaseRequestHadler(RequestHandler):
+
+    @property
+    def logger(self):
+        return Logger()
 
     @property
     def mysqldb(self):
@@ -13,7 +19,11 @@ class BaseRequestHadler(RequestHandler):
         return self.application.redis
 
     def prepare(self):
-        pass
+        """预解析json"""
+        if self.request.headers.get("Content-Type", "").startswith("application/json"):
+            self.json_data = json.loads(self.request.body)
+        else:
+            self.json_data = {}
 
     def write_error(self, status_code, **kwargs):
         pass
@@ -26,3 +36,9 @@ class BaseRequestHadler(RequestHandler):
 
     def on_finish(self):
         super(BaseRequestHadler, self).on_finish()
+
+
+class StaticFileHandler(StaticFileHandler):
+    def __init__(self, *args, **kwargs):
+        super(StaticFileHandler, self).__init__(*args, **kwargs)
+        self.xsrf_token

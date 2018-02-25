@@ -28,7 +28,15 @@ class Logger(logging.Logger):
         self.addHandler(loghandler)
         self.addHandler(terminalhandler)
 
+    @classmethod
+    def loginstance(cls):
+        if not hasattr(cls, "_loginstance"):
+            _loginstance = cls()
+        return _loginstance
+
+
+
 
 if __name__ == "__main__":
-    log = Logger()
+    log = Logger.loginstance()
     log.warning('测试一下')
