@@ -32,7 +32,8 @@ class BaseRequestHadler(RequestHandler):
         pass
 
     def set_default_headers(self):
-        pass
+        """设置默认header为json"""
+        self.set_header("Content-type", "application/json;charset=UTF-8")
 
     def on_finish(self):
         super(BaseRequestHadler, self).on_finish()

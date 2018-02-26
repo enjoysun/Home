@@ -64,7 +64,7 @@ function sendSMSCode() {
     //             }, 1000, 60);
     //         }
     // }, 'json');
-    var data = {mobile:mobile, piccode:imageCode, piccode_id:imageCodeId};
+    var data = {mobile:mobile, codetxt:imageCode, codeid:imageCodeId};
     $.ajax({
         url: "/api/smscode",
         method: "POST",

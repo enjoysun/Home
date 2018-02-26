@@ -34,14 +34,14 @@ class PhoneCodeHandle(BaseRequestHadler):
         img_code_id = self.json_data.get("codeid", "")
         img_code_txt = self.json_data.get("codetxt", "")
         real_code_txt = None
-        if all((mobile, img_code_id, img_code_txt)):
+        if not all((mobile, img_code_id, img_code_txt)):
             return self.write(dict(errno="2501", errmsg="参数错误"))
         try:
             real_code_txt = self.redisdb.get("image_code_%s"%img_code_id)
         except Exception as e:
             Logger.loginstance().error("redis错误:%s"%e)
             return self.write(dict(errno="2502", errmsg="查询错误"))
-        if real_code_txt:
+        if not real_code_txt:
             return self.write(dict(errno="2503", errmsg="验证码过期"))
         if str(real_code_txt).lower() != img_code_txt.lower():
             return self.write(dict(errno="2504", errmsg="验证码错误"))
