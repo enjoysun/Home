@@ -37,7 +37,7 @@ class PhoneCodeHandle(BaseRequestHadler):
         if not all((mobile, img_code_id, img_code_txt)):
             return self.write(dict(errno="2501", errmsg="参数错误"))
         try:
-            real_code_txt = self.redisdb.get("image_code_%s"%img_code_id)
+            real_code_txt = self.redisdb.get("image_code_%s" % img_code_id)
         except Exception as e:
             Logger.loginstance().error("redis错误:%s"%e)
             return self.write(dict(errno="2502", errmsg="查询错误"))

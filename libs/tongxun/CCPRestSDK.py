@@ -8,7 +8,7 @@
     #
     #  An additional intellectual property rights grant can be found
     #  in the file PATENTS.  All contributing project authors may
-    #  be found in the AUTHORS file in the root of the source tree.
+    #  be found in the AUTHORS file in the root of the source tree. s
 
 import md5
 import base64

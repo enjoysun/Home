@@ -1,0 +1,15 @@
+[2018-02-23 21:39:12,065] - RequestHandler.py [Line:12] - [WARNING]-[thread:139841152755456]-[process:30157] - []
+[2018-02-23 21:45:26,926] - VerifyCode.py [Line:22] - [ERROR]-[thread:140505702475520]-[process:30544] - incomplete format
+[2018-02-23 21:48:16,218] - VerifyCode.py [Line:23] - [ERROR]-[thread:140089399813888]-[process:30617] - incomplete format
+[2018-02-23 21:48:58,068] - VerifyCode.py [Line:14] - [WARNING]-[thread:139773252130560]-[process:30617] - 111
+[2018-02-23 21:48:58,076] - VerifyCode.py [Line:24] - [ERROR]-[thread:139773252130560]-[process:30617] - incomplete format
+[2018-02-23 21:52:42,398] - VerifyCode.py [Line:23] - [ERROR]-[thread:140030948005632]-[process:30737] - incomplete format
+[2018-02-23 22:00:21,773] - VerifyCode.py [Line:23] - [ERROR]-[thread:139823962892032]-[process:30823] - incomplete format
+[2018-02-23 22:02:27,768] - VerifyCode.py [Line:23] - [ERROR]-[thread:140115286603520]-[process:30850] - incomplete format
+[2018-02-23 22:03:08,571] - log.py [Line:34] - [WARNING]-[thread:139933443929856]-[process:30933] - 测试一下
+[2018-02-23 22:03:49,905] - VerifyCode.py [Line:23] - [ERROR]-[thread:139721283942144]-[process:30951] - incomplete format
+[2018-02-23 22:06:06,465] - VerifyCode.py [Line:23] - [ERROR]-[thread:140255880099584]-[process:31019] - value is not an integer or out of range
+[2018-02-23 22:13:04,391] - VerifyCode.py [Line:23] - [ERROR]-[thread:140288372705024]-[process:31019] - incomplete format
+[2018-02-23 22:15:20,110] - VerifyCode.py [Line:23] - [ERROR]-[thread:140679528466176]-[process:31019] - value is not an integer or out of range
+[2018-02-23 22:16:32,835] - VerifyCode.py [Line:23] - [ERROR]-[thread:140431685183232]-[process:31250] - value is not an integer or out of range
+[2018-02-23 22:49:57,553] - RequestHandler.py [Line:12] - [WARNING]-[thread:140051567568640]-[process:32063] - []

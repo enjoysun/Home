@@ -42,5 +42,5 @@ class CCP(object):
 if __name__ == "__main__":
     """测试"""
     ccp = CCP.cppinstance()
-    ccp.sendTemplateSMS('15039720822', ["i love you", "everyday"], "1")
+    ccp.sendTemplateSMS('18868195887', ["i love you", "everyday"], "1")
 

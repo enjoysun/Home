@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-#python xml.etree.ElementTree
+#python xml.etree.ElementTree s
 
 import os
 import xml.etree.ElementTree as ET
