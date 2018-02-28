@@ -66,3 +66,12 @@ class LoginHandler(BaseRequestHadler):
         else:
             return self.write(dict(errcode="2509", errmsg="手机号或密码错误！"))
 
+
+class CheckUserLoginHandler(BaseRequestHadler):
+    """判断用户是否登录，逻辑为检查是否缓存登录session信息"""
+    def get(self, *args, **kwargs):
+        if self.check_user_login():
+            self.write(dict(errno=0, errmsg="true", data=self.session.data["name"]))
+        else:
+            self.write(dict(errno=1, errmsg="fales"))
+

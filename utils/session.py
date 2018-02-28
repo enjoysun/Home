@@ -9,12 +9,12 @@ class Session(object):
     def __init__(self, request_handler):
         self.request_handler = request_handler
         # 判断是否是第一次设置
-        self.session_id = self.request_handler.request.headers.get("sid", "")
+        self.session_id = self.request_handler.get_secure_cookie("sid")
         # 如果不存在sessionid则生成sessionid
         if not self.session_id:
             self.session_id = uuid.uuid4().get_hex()
             self.data = {}
-            self.request_handler.set_header("sid", self.session_id)
+            self.request_handler.set_secure_cookie("sid", self.session_id)
         # 存在则取值
         else:
             try:
@@ -25,7 +25,7 @@ class Session(object):
             if not json_data:
                 self.data = {}
             else:
-                self.data = json.dumps(json_data)
+                self.data = json.loads(json_data)
 
     def save(self):
         try:

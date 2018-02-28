@@ -10,5 +10,6 @@ urls = [
     (r'/api/smscode', VerifyCode.PhoneCodeHandle),
     (r'/api/register', RegisterAndLogin.RegisterHandler),
     (r'/api/login', RegisterAndLogin.LoginHandler),
+    (r'/api/check_login', RegisterAndLogin.CheckUserLoginHandler),
     (r'/(.*?)$', StaticFileHandler, dict(path=os.path.join(os.path.dirname(__file__), "html"), default_filename="index.html")),
 ]

@@ -1,6 +1,7 @@
 # coding:utf-8
 from tornado.web import RequestHandler, StaticFileHandler
 from log import Logger
+from utils.session import Session
 import json
 
 
@@ -19,6 +20,7 @@ class BaseRequestHadler(RequestHandler):
         return self.application.redis
 
     def prepare(self):
+        self.xsrf_token
         """预解析json"""
         if self.request.headers.get("Content-Type", "").startswith("application/json"):
             self.json_data = json.loads(self.request.body)
@@ -37,6 +39,10 @@ class BaseRequestHadler(RequestHandler):
 
     def on_finish(self):
         super(BaseRequestHadler, self).on_finish()
+
+    def check_user_login(self):
+        self.session = Session(self)
+        return self.session.data
 
 
 class StaticFileHandler(StaticFileHandler):

@@ -59,15 +59,15 @@ function goToSearchPage(th) {
 
 $(document).ready(function(){
     $.get("/api/check_login", function(data) {
-        if ("0" == data.errcode) {
-            $(".top-bar>.user-info>.user-name").html(data.data.name);
+        if (0 == data.errno) {
+            $(".top-bar>.user-info>.user-name").html(data.data);
             $(".top-bar>.user-info").show();
         } else {
             $(".top-bar>.register-login").show();
         }
     }, "json");
     $.get("/api/house/index", function(data){
-        if ("0" == data.errcode) {
+        if ("0" == data.errno) {
             $(".swiper-wrapper").html(template("swiper-houses-tmpl", {houses:data.houses}));
             $(".area-list").html(template("area-list-tmpl", {areas:data.areas}));
             var mySwiper = new Swiper ('.swiper-container', {
