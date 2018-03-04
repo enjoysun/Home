@@ -31,3 +31,6 @@ log_level = "warning"
 
 # logging 地址
 log_path = os.path.join(os.path.dirname(__file__), "logs")
+
+# 七牛图片默认域名
+img_default_domain = "http://p4y0gxipy.bkt.clouddn.com/"
