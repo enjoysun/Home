@@ -1,0 +1,7 @@
+[2018-02-27 21:04:07,286] - RegisterAndLogin.py [Line:15] - [ERROR]-[thread:140147912718080]-[process:6123] - 数据插入错误:'Connection' object has no attribute 'excute'
+[2018-02-27 21:08:31,161] - RegisterAndLogin.py [Line:15] - [ERROR]-[thread:140425970902784]-[process:6241] - 数据插入错误:(1364, "Field 'user_name' doesn't have a default value")
+[2018-02-27 21:15:16,204] - RegisterAndLogin.py [Line:16] - [ERROR]-[thread:139626387904256]-[process:6441] - 数据插入错误:'ascii' codec can't decode byte 0xe7 in position 0: ordinal not in range(128)
+[2018-02-27 21:20:18,767] - RegisterAndLogin.py [Line:16] - [ERROR]-[thread:140502760847104]-[process:6536] - 数据插入错误:%d format: a number is required, not str
+[2018-02-27 21:56:18,415] - RegisterAndLogin.py [Line:27] - [ERROR]-[thread:139694046533376]-[process:7364] - 数据插入错误:(1062, "Duplicate entry '18567442380' for key 'user_mobile'")
+[2018-02-27 21:56:27,722] - RegisterAndLogin.py [Line:27] - [ERROR]-[thread:140628714100480]-[process:7364] - 数据插入错误:(1062, "Duplicate entry '18567442380' for key 'user_mobile'")
+[2018-02-27 21:56:56,634] - RegisterAndLogin.py [Line:27] - [ERROR]-[thread:139898215851776]-[process:7364] - 数据插入错误:(1062, "Duplicate entry '18567442380' for key 'user_mobile'")

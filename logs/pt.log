@@ -1,7 +1,8 @@
-[2018-02-27 21:04:07,286] - RegisterAndLogin.py [Line:15] - [ERROR]-[thread:140147912718080]-[process:6123] - 数据插入错误:'Connection' object has no attribute 'excute'
-[2018-02-27 21:08:31,161] - RegisterAndLogin.py [Line:15] - [ERROR]-[thread:140425970902784]-[process:6241] - 数据插入错误:(1364, "Field 'user_name' doesn't have a default value")
-[2018-02-27 21:15:16,204] - RegisterAndLogin.py [Line:16] - [ERROR]-[thread:139626387904256]-[process:6441] - 数据插入错误:'ascii' codec can't decode byte 0xe7 in position 0: ordinal not in range(128)
-[2018-02-27 21:20:18,767] - RegisterAndLogin.py [Line:16] - [ERROR]-[thread:140502760847104]-[process:6536] - 数据插入错误:%d format: a number is required, not str
-[2018-02-27 21:56:18,415] - RegisterAndLogin.py [Line:27] - [ERROR]-[thread:139694046533376]-[process:7364] - 数据插入错误:(1062, "Duplicate entry '18567442380' for key 'user_mobile'")
-[2018-02-27 21:56:27,722] - RegisterAndLogin.py [Line:27] - [ERROR]-[thread:140628714100480]-[process:7364] - 数据插入错误:(1062, "Duplicate entry '18567442380' for key 'user_mobile'")
-[2018-02-27 21:56:56,634] - RegisterAndLogin.py [Line:27] - [ERROR]-[thread:139898215851776]-[process:7364] - 数据插入错误:(1062, "Duplicate entry '18567442380' for key 'user_mobile'")
+[2018-03-04 20:31:30,421] - UserCenter.py [Line:24] - [ERROR]-[thread:139698472007424]-[process:4848] - mysql错误：'UserImageUpload' object has no attribute 'session'
+[2018-03-04 20:32:51,862] - UserCenter.py [Line:13] - [ERROR]-[thread:140328971200256]-[process:5331] - 获取头像错误'avatar'
+[2018-03-04 20:33:10,210] - UserCenter.py [Line:24] - [ERROR]-[thread:140328971200256]-[process:5331] - mysql错误：'UserImageUpload' object has no attribute 'session'
+[2018-03-04 20:33:25,312] - UserCenter.py [Line:24] - [ERROR]-[thread:140328971200256]-[process:5331] - mysql错误：'UserImageUpload' object has no attribute 'session'
+[2018-03-04 20:51:39,412] - UserCenter.py [Line:24] - [ERROR]-[thread:140166398830336]-[process:5386] - mysql错误：'UserImageUpload' object has no attribute 'session'
+[2018-03-04 22:00:12,729] - UserCenter.py [Line:50] - [ERROR]-[thread:140564555671296]-[process:7947] - mysql错误HTTP 400: Bad Request (Missing argument name)
+[2018-03-04 22:03:53,732] - UserCenter.py [Line:50] - [ERROR]-[thread:139994048452352]-[process:8004] - mysql错误HTTP 400: Bad Request (Missing argument name)
+[2018-03-04 22:05:46,651] - UserCenter.py [Line:51] - [ERROR]-[thread:139761353225984]-[process:8161] - mysql错误(1054, "Unknown column '\xe5\x93\x88\xe6\x98\x82' in 'field list'")
